@@ -11,4 +11,4 @@ size below 500KB.
 
 As this code has been optimized for specific hardware products, use at your own risk on other hardware.
 
-Thanks to [Theo Arends](https://github.com/arendst) and for his great work in developing this!
+Thanks to [Theo Arends](https://github.com/arendst) and for his great work in developing Tasmota!
