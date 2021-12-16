@@ -1381,6 +1381,10 @@ void HandleRoot(void)
     return;
   }
 
+    if (HandleRootStatusRefresh() && (Webserver->hasArg("m"))) {
+    return;
+  }
+
   if (WifiIsInManagerMode()) {
 #ifndef FIRMWARE_MINIMAL
     if (strlen(SettingsText(SET_WEBPWD)) && !(Webserver->hasArg("USER1")) && !(Webserver->hasArg("PASS1")) && HTTP_MANAGER_RESET_ONLY != Web.state) {

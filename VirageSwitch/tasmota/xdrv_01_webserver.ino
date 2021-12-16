@@ -1381,6 +1381,10 @@ void HandleRoot(void)
     return;
   }
 
+  if (HandleRootStatusRefresh() && (Webserver->hasArg("m"))) {
+    return;
+  }
+
   if (WifiIsInManagerMode()) {
 #ifndef FIRMWARE_MINIMAL
     if (strlen(SettingsText(SET_WEBPWD)) && !(Webserver->hasArg("USER1")) && !(Webserver->hasArg("PASS1")) && HTTP_MANAGER_RESET_ONLY != Web.state) {
@@ -2208,6 +2212,7 @@ void HandleWifiConfiguration(void)
 //    </form>;
     }
 
+
   WSContentSend_P(HTTP_TABLE100);
   WSContentSend_P(PSTR("<tr>"));
       char stemp[33];
@@ -2220,7 +2225,7 @@ void HandleWifiConfiguration(void)
       
       }
   WSContentSend_P(PSTR("</tr></table>"));
-
+  
     // As WIFI_HOSTNAME may contain %s-%04d it cannot be part of HTTP_FORM_WIFI where it will exception wifi config list
     WSContentSend_P(HTTP_FORM_WIFI, SettingsText(SET_STASSID1), SettingsText(SET_MQTT_TOPIC), MQTT_HOST, SettingsText(SET_MQTT_HOST), (Settings.flag.mqtt_enabled) ? " checked" : "", (Settings.flag3.mdns_enabled) ? " checked" : "", SettingsText(SET_DEVICENAME));
     //char stemp[strlen(TasmotaGlobal.mqtt_data) +1];
@@ -2245,6 +2250,7 @@ void HandleWifiConfiguration(void)
 
 
   if (WifiIsInManagerMode()) {
+
 #ifndef FIRMWARE_MINIMAL
     WSContentSpaceButton(BUTTON_RESTORE);
     WSContentButton(BUTTON_RESET_CONFIGURATION);

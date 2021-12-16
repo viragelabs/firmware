@@ -20,7 +20,7 @@
 #ifndef _TASMOTA_VERSION_H_
 #define _TASMOTA_VERSION_H_
 
-const uint32_t VERSION = 0x03020000; //Virage version
+const uint32_t VERSION = 0x03020100; //Virage version
 const uint32_t VERSION_TAS = 0x09020000;
 
 #endif  // _TASMOTA_VERSION_H_
