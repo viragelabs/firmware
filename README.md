@@ -1,9 +1,9 @@
-Firmware source code (V3.2) for [Virage Laboratories](https://www.viragelabs.com/products) WiFi-enabled devices, including:
+Firmware source code (V3.2.1) for [Virage Laboratories](https://www.viragelabs.com/products) WiFi-enabled devices, including:
 
 - VirageSwitch
 - VirageDimmer
 - ViragePlug
-- VirageBridge
+- VirageBridge (V3.2)
 
 These are based on [Tasmota](https://github.com/arendst/Tasmota), but have been modified and customized to control specific Virage Laboratories devices including a simplified UI,
 enhanced MQTT capabilities, hard-coding of configuration (to survive a factory reset) and removal of unnecessary settings, and removal of unnecessary code to bring compiled
