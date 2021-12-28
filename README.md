@@ -6,7 +6,7 @@ Firmware source code (V3.2.1) for [Virage Laboratories](https://www.viragelabs.c
 - VirageBridge (V3.2)
 
 These are based on [Tasmota](https://github.com/arendst/Tasmota), but have been modified and customized to control specific Virage Laboratories devices including a simplified UI,
-enhanced MQTT capabilities, hard-coding of configuration (to survive a factory reset) and removal of unnecessary settings, and removal of unnecessary code to bring compiled
+enhanced MQTT capabilities, hard-coding of configuration (to survive a factory reset) and removal of unnecessary settings and code to bring compiled
 size below 500KB.
 
 As this code has been optimized for specific hardware products, use at your own risk on other hardware.
